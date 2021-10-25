@@ -1,44 +1,50 @@
-import { createContext, useState } from "react";
-import { useAnimation } from "framer-motion";
+import { createContext } from "react";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
 export const DataContext = createContext({});
 
 const DataProvider = ({ children }) => {
-  // !navbar
-  const { ref, inView } = useInView();
-  const controls = useAnimation();
-  useEffect(() => {
-    if (inView) {
-      controls.start("hidden");
-    } else {
-      controls.start("active");
-    }
+  const [opened, setOpened] = useState(false);
+  // !slider-left
+  const { ref, inView } = useInView({
+    threshold: "1",
   });
+
+  const control = useAnimation();
+
   const variants = {
-    hidden: {
-      height: "4em",
+    initial: {
+      x: "-100vw",
+      opacity: 0,
+      scale: 0.5,
+      transition: {
+        duration: 1,
+        type: "tween",
+      },
     },
     active: {
-      height: "3em",
-    },
-
-    rotateNone: {
-      rotate: "0deg",
-    },
-    rotateStart: {
-      rotate: "180deg",
+      x: 0,
+      opacity: 1,
+      scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 1,
+        type: "tween",
       },
     },
   };
-  const [active, setActive] = useState(false);
-  // !!!!!!
+
+  useEffect(() => {
+    if (inView) {
+      control.start("active");
+      console.log(1212);
+    } else {
+      control.start("initial");
+    }
+  });
   return (
-    <DataContext.Provider
-      value={{ ref, inView, controls, variants, active, setActive }}
-    >
+    <DataContext.Provider value={{ opened, setOpened, ref, variants, control }}>
       {children}
     </DataContext.Provider>
   );

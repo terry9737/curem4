@@ -4,9 +4,10 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  position: relative;
 
   @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
-    max-width: 540px;
+    max-width: 100%;
     width: 100%;
   }
   @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
@@ -18,7 +19,7 @@ export const Container = styled.div`
     width: 100%;
   }
   @media screen and (min-width: ${(p) => p.theme.breakpoints.xl}) {
-    max-width: 1270px;
+    max-width: 1400px;
     width: 100%;
   }
   ${(p) =>

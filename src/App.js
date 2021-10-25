@@ -1,10 +1,12 @@
-import Navbar from "./components/navbar/Navbar";
-import Header from "./components/header/Header";
+import Header from "./components/navigation/Header";
+import { Container } from "./components/UI/Container";
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Header />
+      <Container>
+        <Header />
+      </Container>
     </>
   );
 }
