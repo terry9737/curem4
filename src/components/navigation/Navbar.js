@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { DataContext } from "../context/context";
 
 const Navbar = () => {
-  const { opened, setOpened } = useContext(DataContext);
+  const { opened } = useContext(DataContext);
   return (
     <StyledWrapper>
       <nav>
