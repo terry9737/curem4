@@ -5,6 +5,10 @@ export const Theme = {
       topText: "#ffc800",
       topTextHover: "#47b5ed",
     },
+    general: {
+      mainRed: "#f61067",
+      mainGray: "#776C82",
+    },
   },
   breakpoints: {
     sm: "640px",

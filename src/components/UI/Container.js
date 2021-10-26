@@ -11,7 +11,7 @@ export const Container = styled.div`
     width: 100%;
   }
   @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
-    max-width: 720px;
+    max-width: 100%;
     width: 100%;
   }
   @media screen and (min-width: ${(p) => p.theme.breakpoints.lg}) {

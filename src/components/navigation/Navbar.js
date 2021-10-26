@@ -95,6 +95,7 @@ const StyledWrapper = styled(Wrapper)`
       overflow: hidden;
       background: #fff;
       transition: all 0.2s linear;
+      margin-top: -1px;
 
       @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
         display: none;
