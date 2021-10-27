@@ -8,6 +8,8 @@ export const Theme = {
     general: {
       mainRed: "#f61067",
       mainGray: "#776C82",
+      mainFooter: "#150433",
+      midPur: "#30124E",
     },
   },
   breakpoints: {

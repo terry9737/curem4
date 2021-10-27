@@ -37,13 +37,6 @@ const StyledSliderLeft = styled(motion.div)`
   padding: 10px;
   font-size: 0.9rem;
 
-  @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
-    max-width: 550px;
-    padding: 25px 20px 25px 5px;
-    width: 100%;
-    font-size: 1rem;
-  }
-
   div {
     display: flex;
     align-items: center;
@@ -55,6 +48,7 @@ const StyledSliderLeft = styled(motion.div)`
       max-width: 80%;
       width: 100%;
       color: #fff;
+      padding-left: 20px;
     }
 
     span {
@@ -91,6 +85,43 @@ const StyledSliderLeft = styled(motion.div)`
       }
       &:hover .second_arrow {
         transform: translateX(200%);
+      }
+    }
+  }
+
+  @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    && {
+      max-width: 499px;
+      padding: 25px 20px 25px 5px;
+      width: 100%;
+      font-size: 1rem;
+
+      p {
+        padding-left: 30px;
+      }
+    }
+  }
+  @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
+    && {
+      max-width: 795px;
+      padding: 25px 20px 25px 5px;
+      width: 100%;
+      font-size: 1rem;
+
+      p {
+        padding-left: 30px;
+      }
+    }
+  }
+  @media screen and (min-width: ${(p) => p.theme.breakpoints.xl}) {
+    && {
+      max-width: 848px;
+      padding: 25px 20px 25px 5px;
+      width: 100%;
+      font-size: 1rem;
+
+      p {
+        padding-left: 80px;
       }
     }
   }

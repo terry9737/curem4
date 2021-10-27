@@ -96,7 +96,7 @@ const StyledWrapper = styled(Wrapper)`
       }
       .guy_image {
         top: -110px;
-        right: -130px;
+        right: -20px;
         img {
           height: 100%;
         }

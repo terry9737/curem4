@@ -2,6 +2,7 @@ import { Wrapper } from "../UI/Wrapper";
 import styled from "styled-components";
 import reactIcon from "../../images/icon-react.svg";
 import FooterBanner from "./FooterBanner";
+import { ChapterTitle } from "../UI/Typography";
 const Services = () => {
   const data = [
     {
@@ -43,7 +44,7 @@ const Services = () => {
   ];
   return (
     <CustomWrapper>
-      <p>What we can do?</p>
+      <ChapterTitle>What we can do?</ChapterTitle>
       <div className="services_grid">
         <h2>Our services</h2>
         <div className="services_grid-grid">
@@ -69,20 +70,18 @@ export default Services;
 const CustomWrapper = styled(Wrapper)`
   margin-top: 50px;
   padding: 0px 30px;
-
-  p {
-    font-size: 0.84rem;
-    text-transform: uppercase;
-    color: ${(p) => p.theme.colors.general.mainRed};
-    font-weight: 800;
-    margin-bottom: 18px;
-  }
+  margin-bottom: 162px;
 
   h2 {
     font-weight: 500;
     font-size: 2.8125rem;
     margin-bottom: 52px;
     text-align: center;
+  }
+  @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    h2 {
+      text-align: left;
+    }
   }
 
   .services_grid {
@@ -113,9 +112,7 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 118px; */
   align-self: center;
-  /* backgreEound: pink; */
 
   .card_wrapper {
     height: 54px;
@@ -140,6 +137,23 @@ const StyledCard = styled.div`
     text-align: center;
   }
   @media screen and (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    & {
+      width: auto;
+    }
+    p,
+    h3 {
+      text-align: left;
+    }
+
+    & {
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (min-width: ${(p) => p.theme.breakpoints.md}) {
+    & {
+      /* width: 320px; */
+    }
     p,
     h3 {
       text-align: left;
